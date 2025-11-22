@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Using JavaScript</title>
+
+    <style>
+        table {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        input {
+            padding: 6px;
+            margin: 3px;
+        }
+        button {
+            padding: 6px 12px;
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+        function add(){
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = a + b;
+        }
+
+        function sub(){
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = a - b;
+        }
+
+        function mul(){
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = a * b;
+        }
+
+        function div(){
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            if(b == 0){
+                alert("Cannot divide by zero");
+            } else {
+                document.getElementById("result").value = a / b;
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+<h2>Simple Calculator (JS)</h2>
+
+<table>
+    <tr>
+        <td>Enter First Number</td>
+        <td><input type="number" id="num1"></td>
+    </tr>
+
+    <tr>
+        <td>Enter Second Number</td>
+        <td><input type="number" id="num2"></td>
+    </tr>
+
+    <tr>
+        <td colspan="2" style="text-align:center;">
+            <button onclick="add()">Add</button>
+            <button onclick="sub()">Subtract</button>
+            <button onclick="mul()">Multiply</button>
+            <button onclick="div()">Divide</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td><b>Result</b></td>
+        <td><input type="text" id="result" readonly></td>
+    </tr>
+</table>
+
+</body>
+</html>
